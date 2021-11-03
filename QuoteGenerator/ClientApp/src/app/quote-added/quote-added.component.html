@@ -1,0 +1,31 @@
+<div>
+  <p>quote-added works!</p>
+  <div>
+    <label>Author: </label>
+    <input type="text" [(ngModel)]="author" (change)="validate()" />
+  </div>
+  <div>
+    <label>Quote: </label>
+    <input type="text" [(ngModel)]="quote" (change)="validate()"/>
+  </div>
+  <div>
+    <label>Type: </label>
+    <input type="text" [(ngModel)]="type" (change)="validate()"/>
+  </div>
+  <br />
+  <div>
+    <span *ngIf="quote">{{quote}}</span>
+    <br *ngIf="quote" />
+    <span *ngIf="author">{{author}}</span>
+    <br *ngIf="author" />
+    <span *ngIf="type">- - - - - - - - - - - -</span>
+    <br *ngIf="type" />
+    <span>{{type}}</span>
+  </div>
+  <div>
+    <button type="button" (click)="submit()">Submit!</button>
+  </div>
+  <div>
+    <span class="error" *ngIf="showError">{{getErrorMessage()}}</span>
+  </div>
+</div>
