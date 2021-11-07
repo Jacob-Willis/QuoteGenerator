@@ -55,6 +55,6 @@ export class QuoteAddedComponent implements OnInit {
       this.showError = true;
       addendum = addendum + ' | type';
     }
-    return this.errorMessage + addendum + ' |';
+    return this.errorMessage + addendum;
   }
 }
